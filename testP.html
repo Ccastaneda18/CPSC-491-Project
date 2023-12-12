@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Object</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Imports a model-viewer JavaScript code -->
+    <!-- It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div id="container">
+
+        <!-- Navbar container -->
+        <div id="navbar">
+            <div id="logo">
+                <img src="assets/logo1.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="#">Testing</a>
+                </li>
+                <li><a href="carselector.html">Car Selector</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="color_car.html">CarColor</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+        <!-- An aside -->
+        <!-- This is for holding the 3D object -->
+        <div id="bSide">
+
+            <!-- 3D object -->
+            <!-- This inserts the 3D object inside the aside container -->
+            <model-viewer src="assets/1/scene.gltf" alt="Porsche_911" auto-rotate camera-controls ar ios-src="assets/1/scene.gltf">
+            </model-viewer>
+
+            <!-- Content container -->
+            <!-- This is for holding some brief description about the 3D object -->
+            <div id="content">
+                <p>Select Car Color:</p>
+                <input type="color" id="colorPicker" value="#ff0000">
+                <button>Color</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the model-viewer element
+        const carModelViewer = document.getElementById('carModel');
+
+        // Get the color picker element
+        const colorPicker = document.getElementById('colorPicker');
+
+        // Add an event listener to handle color changes
+        colorPicker.addEventListener('input', (event) => {
+            // Set the color of the model to the selected color
+            carModelViewer.style.setProperty('--material-color', event.target.value);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Locations</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src="./index.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU-DoX_lWrSjHrXBkKHk8tUJaCt9WiSeQ&libraries=places"></script>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div id="container">
+
+        <!-- Navbar container -->
+        <div id="navbar">
+            <div id="logo">
+                <img src="assets/logo1.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="locations.html">Locations</a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="carselector.html">Car Selector</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+        </div>
+        <script>
+            const p = document.querySelector('p');
+          
+            function onError() {
+              p.textContent = 'Unable to locate you'
+            }
+            function onSuccess(position) {
+              p.textContent = `Latitude: ${position.coords.latitude} °, Longitude: ${position.coords.longitude} °`;
+            }
+          
+            if (!navigator.geolocation) {
+              // This browser doesn't support Geolocation, show an error
+              onError();
+            } else {
+              // Get the current position of the user!
+              navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            }
+          </script>
+    
+          <iframe src="https://my.atlist.com/map/68356ea7-672d-463e-94a7-aa66cc8d4e6b?share=true" 
+          allow="geolocation 'self' https://my.atlist.com" 
+          width="100%" 
+          height="100%" 
+          loading="lazy" 
+          frameborder="0" 
+          scrolling="yes" 
+          allowfullscreen>
+    </iframe>
+        
+  </div>
+        <!-- Social media icons -->
+        <!-- This is for holding some company's social media icons and related links -->
+        <div id="icons">
+            <div id="iconsLogo">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+</body>

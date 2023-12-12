@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Selector</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+</head>
+
+<body>
+    <!-- Main Container -->
+    <div id="container">
+
+        <!-- Navbar container -->
+        <div id="navbar">
+            <div id="logo">
+                <img src="assets/logo1.png" alt="logo">
+            </div>
+            <ul>
+                <li class="active">
+                    <a href="carselector.html">Car-Selector</a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="locations.html">Locations</a></li>
+            </ul>
+        </div>
+
+        <!-- An a,b,cside -->
+        <!-- This is for holding the 3D object's -->
+        <div id="content1">
+            <button onclick="window.location.href='testP.html'">Wraps</button>
+            <button onclick="window.location.href='testP.html'">Rims</button>
+        </div>
+
+        <div id="cSide">
+            <div class="car-label">Porsche 911</div>
+            <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the cside container -->
+            <model-viewer src="assets/1/scene.gltf" alt="Porsche_911" auto-rotate camera-controls ar ios-src="assets/1/scene.gltf">
+            </model-viewer>
+        </div>
+
+
+        <div id="content2">
+            <button onclick="window.location.href='testL.html'">Wraps</button>
+            <button onclick="window.location.href='testL.html'">Rims</button>
+        </div>
+
+        <div id="bSide">
+            <div class="car-label">Lamborghini Urus</div>
+            <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the bside container -->
+            <model-viewer src="lambo/scene.gltf" alt="Urus" auto-rotate camera-controls ar ios-src="assets/1/scene.gltf">
+            </model-viewer>
+        </div>
+        
+        <div id="content3">
+            <button onclick="window.location.href='testS.html'">Wraps</button>
+            <button onclick="window.location.href='testS.html'">Rims</button>
+        </div>
+        <div id="dSide">
+
+            <div class="car-label">Toyota Supra</div>
+            
+            <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the bside container -->
+            <model-viewer src="supra/scene.gltf" alt="Supra" auto-rotate camera-controls ar ios-src="assets/1/scene.gltf">
+            </model-viewer>
+              </div>
+         
+
+
+    </div>
+</body>
