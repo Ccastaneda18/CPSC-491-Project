@@ -1,0 +1,11 @@
+Model Information:
+* title:	Modified Lamborghini Urus
+* source:	https://sketchfab.com/3d-models/modified-lamborghini-urus-5c37498463e843db802e601ffddc074b
+* author:	BRO (https://sketchfab.com/musawork786)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Modified Lamborghini Urus" (https://sketchfab.com/3d-models/modified-lamborghini-urus-5c37498463e843db802e601ffddc074b) by BRO (https://sketchfab.com/musawork786) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
